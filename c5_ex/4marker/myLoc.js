@@ -73,31 +73,34 @@ function showMap(coords) {
 
 // 사용자 마커를 추가
 //추가2
-
-
+var title = "당신의 위치";
+ var content = "당신은 여기에 있습니다: " + coords.latitude + ", " + coords.longitude;
+ addMarker(map, googleLatAndLong, title, content);
 
 }
 
 function addMarker(map, latlong, title, content) {
-//추가1
+	 var markerOptions = {
+	 position: latlong, 
+	 map: map, 
+	 title: title, 
+	 clickable: true
+	 };
+	 var marker = new google.maps.Marker(markerOptions);
 
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-}
-
+	 var infoWindowOptions = {
+	 	content: content, 
+		position: latlong
+	 };
+	 var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+	// 정보창을 생성
+	 google.maps.event.addListener(marker, 'click', function() {
+	//사용자가 marker를 클릭할 때 호출되는 함수에 리스너를 전달
+	//리스터란 onload나 onclick 같은 핸들러와 비슷
+	 infoWindow.open(map);
+	//마커를 클릭하면 이함수가 호출되어 지도상에 정보창을 띄움
+	 });
+	}//function addMarker의 끝
 
 function displayError(error) {
 	var errorTypes = {

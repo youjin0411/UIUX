@@ -1,6 +1,7 @@
 /* myLoc.js */
 
 //추가3 
+var map = null;
 
 var ourCoords =  {
 	latitude: 47.624851,
@@ -32,6 +33,7 @@ function displayLocation(position) {
 	var distance = document.getElementById("distance");
 	distance.innerHTML = "당신은 WickedlySmart HQ와 " + km + "km 떨어져 있습니다";
 	// 추가2
+	showMap(position.coords);
 }
 // --------------------- 준비 코드 시작 ------------------
 //
@@ -59,14 +61,17 @@ function degreesToRadians(degrees) {
 
 
 //추가1
-
-
-
-
-
-
-
-
+function showMap(coords) {
+	var googleLatAndLong = new google.maps.LatLng(coords.latitude, 
+	coords.longitude);
+	var mapOptions = {
+		zoom: 10, 
+		center: googleLatAndLong, 
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var mapDiv = document.getElementById("map");
+	map = new google.maps.Map(mapDiv, mapOptions);
+}
 
 function displayError(error) {
 	var errorTypes = {

@@ -1,26 +1,22 @@
 /* myLoc.js */
-
-//추가2
+var watchId = null;
 var map = null;
-var ourCoords =  {
-	latitude: 47.624851,
-	longitude: -122.52099
+var ourCoords = {
+ latitude: 47.624851, longitude: -122.52099
 };
-
 window.onload = getMyLocation;
 
-//추가1
-
-
-
-
-
-
-
-
-
-
-
+function getMyLocation() {
+ if (navigator.geolocation) {
+ var watchButton = document.getElementById("watch");
+ watchButton.onclick = watchLocation;
+ var clearWatchButton=document.getElementById("clearWatch");
+ clearWatchButton.onclick = clearWatch;
+ }
+ else {
+ alert("이런, 지오로케이션이 제공되지 않네요");
+ }
+}
 function displayLocation(position) {
 	var latitude = position.coords.latitude;
 	var longitude = position.coords.longitude;
@@ -34,7 +30,9 @@ function displayLocation(position) {
 	distance.innerHTML = "당신은 WickedlySmart HQ와 " + km + "km 떨어져 있습니다";
 
 //추가5
-
+if (map == null) {
+	showMap(position.coords);
+	}
 
 }
 
@@ -122,10 +120,18 @@ function displayError(error) {
 // 사용자 위치를 보는 코드
 //
 
-//추가3
-
-
-
-
-//추가4
-
+function watchLocation() {
+	watchId = navigator.geolocation.watchPosition(
+	displayLocation, 
+   displayError);
+   }
+   //watchPosition 메서드를 호출하는데, 이미 작성한 성공 핸들러인 displayLocation과 
+   기존의
+   //에러 핸들러이 displayError를 전달
+   function clearWatch() {
+	if (watchId) {
+	navigator.geolocation.clearWatch(watchId);
+	watchId = null;
+	}
+   } 
+   //watchId 가 있는지 확인하고 watchId를 전달하여 gelocation.clearWatch메서드를 호출, 추적 종
