@@ -1,0 +1,296 @@
+/* Variables CSS */
+:root {
+  /* color */
+  --text_color: #fff;
+  --main_color_footer: #fff6b3;
+  --main_color_back: #fffce6;
+  --main_color_nav: #fff399;
+  --main_color_nav_dark: #ffed66;
+  --test_color_footer: #d4b3ff;
+  --test_color_back: #f1e6ff;
+  --test_color_nav: #c599ff;
+  --test_color_nav_dark: #a866ff;
+  --stats_color_footer: #ffb3b3;
+  --stats_color_back: #ffe6e6;
+  --stats_color_nav: #ff8080;
+  --stats_color_nav_dark:  #ff4d4d;
+  --spring_color_footer: #ffc2de;
+  --spring_color_back: #ffe6f1;
+  --spring_color_nav: #ff99c9;
+  --spring_color_nav_dark: #ff66ad;
+  --summer_color_footer: #cffdb5;
+  --summer_color_back: #effee6;
+  --summer_color_nav: #affb83;
+  --summer_color_nav_dark: #8ffa52;
+  --fall_color_footer: #fdd9b5;
+  --fall_color_back: #fef2e6;
+  --fall_color_nav: #fccc9c;
+  --fall_color_nav_dark: #fab36b;
+  --winter_color_footer: #bfebff;
+  --winter_color_back: #e6f7ff;
+  --winter_color_nav: #99dfff;
+  --winter_color_nav: #66cfff; 
+} 
+
+* {
+    margin: 0; /*빈공간X*/
+    padding: 0; /*빈공간X*/
+    box-sizing: border-box;
+    font-family: "Noto Sans KR";
+  }
+  h3 {
+    padding-top: 20px;
+    text-align: center;
+    color: #c14e4e;
+  }
+  /* body{
+    height: 100%;
+  } */
+  h4{
+    font-size: 1.5rem;
+    color: #e47474;
+  }
+  p{
+    color: #c14e4e; 
+    font-size: 1.25rem;
+    display: flex;
+    /*즉, vw는 현재 실행중인 스크린 크기에 맞춰 vw(width)상대적 크기를 반환하겠다는 뜻입니다.*/
+  }
+
+  .QA{
+    padding: 10px;
+  }
+b{
+  font-size: 1.4rem; 
+}
+
+  .big {
+    font-size: 2.2rem;
+  }
+
+.cont{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.point{
+    size: 3.0rem;
+    text-align: center;
+}
+
+.titlelast{
+    background-color:cornsilk;
+    display: flex;
+    justify-content: center;
+    color:rgb(251, 168, 168);
+    width: 432px;
+    margin: 0 auto;
+    height: 50px;
+    padding: 10px;
+}
+.last{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px; /*열과 열 사이의 거리*/
+    row-gap: 30px;
+    margin: 35px 1.5rem; /*위아래 좌우 거리 주기 */
+}
+
+
+
+.img{
+  border-radius: 0.2rem; /*모퉁이가 둥굴게 */
+  flex:1 1 250%; /*기본 240px이고 커지면 확장하자*/
+  max-width: 280px; /* 너무 넓지 않게 max 정하자  */
+}
+::selection{
+  background-color: #eb9595;
+}
+/* FOOTER  CSS */
+.footer {
+    width: 100%; /* 넓이를 100%로 채우기 반응형 */
+    background-color: var(--stats_color_footer);
+    padding: 10px 90px;
+  }
+  
+  .contain {
+    /* margin-left: 1rem;
+    margin-right: 1rem; */
+    display: flex;
+    justify-content: space-between;  
+  }
+  
+  .footer .col {
+    align-items: center;
+    float: left;
+    column-gap: 40px; /*글자사이의 거리 */
+  }
+  
+  .footer .col .social {
+    float: left;
+  }
+  
+  .footer .col h1 {
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: #292e52;
+    /* footer 소제목 글씨 모양 */
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+  }
+  
+  .footer .col ul {
+    list-style-type: none; /* • 모양 없애기 */
+  }
+  
+  .footer .col ul li {
+    color: #ffffff;
+    font-size: 0.97vw;
+    /*글자사이의 간격*/
+    padding: 6px 0px 6px 0px; 
+    cursor: pointer; /*cursor 마우스 커서 모양 뜨기 */
+    /*마우스 커서 시 색상 변하는 속도 조절 */
+    transition: 0.2s; 
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+  }
+  
+  .social ul li {
+    display: inline-block;
+  }
+   
+  i {
+    font-size: 1.1rem;
+  }
+  /*마우스커서 올릴 시 글자의 색상이 변함 */
+  .footer .col ul li:hover {
+    color: #c14e4e;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+  }
+  
+  /*마우스커서 올릴 시 글자의 색상이 변함 */
+  .social ul li img :hover {
+    color: #fff;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+  }
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  /* @media only screen and (max-width: 1139px) {
+    .contain .social {
+      width: 100%;
+      display: block;
+      padding: 0.5rem 0;
+    }
+    .social h1 {
+      margin: 0px;
+    }
+  }
+  @media only screen and (max-width: 930px) {
+    .footer .col {
+      width: 100%;
+    }
+    .footer .col h1 {
+      font-size: 14px;
+    }
+    .footer .col ul li {
+      font-size: 13px;
+    }
+  } */
+  /* @media screen and (max-width: 600px) {
+    .footer .col {
+      width: 10%;
+    }
+    .footer .col h1 {
+      font-size: 0.375rem;
+    }
+    .footer .col ul li {
+      font-size: 0.3vw;
+    }
+    .col {
+      display:flow-root;
+    }
+  } */
+  /* @media only screen and (max-width: 340px) {
+    .footer .col {
+      width: 100%;
+    }
+  } */
+
+/* main card */
+main {
+  display: flex; /*수평정렬*/
+  justify-content: center;
+  flex-wrap: wrap; /* 좁혀지면 하나씩 아래로 내려감  */
+  column-gap: 60px; /*열과 열 사이의 거리*/
+  row-gap: 40px;
+  margin: 44px 2rem; /*위아래 좌우 거리 주기 */
+}
+
+.card {
+  background-color:rgb(247, 204, 204);
+  border-radius: 1rem; /*모퉁이가 둥굴게 */
+  flex: 1 0 240px; /*기본 240px이고 커지면 확장하자*/
+  max-width: 300px; /* 너무 넓지 않게 max 정하자  */
+}
+.card-image1 {
+  height: 0;
+  padding-bottom: 66.6666666667%; /*그림 비율 유지하며 확대/축소 : 160/240 */
+  /* height: 160px; */
+  background: url("../이미지/가게1.jpg") center center;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+.card-image2 {
+  height: 0;
+  padding-bottom: 66.6666666667%; /*그림 비율 유지하며 확대/축소 : 160/240 */
+  /* height: 160px; */
+  background: url("../이미지/가게2.jpg") center center;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+.card-image3 {
+  height: 0;
+  padding-bottom: 66.6666666667%; /*그림 비율 유지하며 확대/축소 : 160/240 */
+  /* height: 160px; */
+  background: url("../이미지/가게3.jpg") center center;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+.card-image4 {
+  height: 0;
+  padding-bottom: 66.6666666667%; /*그림 비율 유지하며 확대/축소 : 160/240 */
+  /* height: 160px; */
+  background: url("../이미지/가게4.jpg") center center;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+
+.card-description{
+  margin: 1rem;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.5px;
+  font-size: 1rem;
+}
+.card-menu{
+  margin-top: 1rem;
+  text-align: center; /*메뉴 가운데 정렬*/
+}
+
+hr{
+  background-color: #ffb3b3;
+  height: 5px;
+}
+

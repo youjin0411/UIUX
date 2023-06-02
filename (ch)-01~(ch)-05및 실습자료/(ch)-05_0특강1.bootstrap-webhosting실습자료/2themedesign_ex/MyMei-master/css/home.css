@@ -1,0 +1,226 @@
+body {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    color: rgb(19, 19, 19);
+}
+
+ul {
+    list-style: none;
+}
+
+.main-img {
+    height: 30vw;
+    width: 100%;
+    background: linear-gradient( to bottom, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.75) 85%, rgba(255, 255, 255, 1) 100%), url("../마이스터고/이미지/mainpage.png");
+    background-size: cover;
+    margin-bottom: 1.5rem;
+}
+
+.info {
+    text-align: center;
+    top: 80%;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.list {
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    transform: translate(0, 0);
+}
+
+.list2 {
+    place-content: center;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+}
+
+.item {
+    margin-right: 20px;
+    list-style: none;
+    user-select: none;
+}
+
+li.item {
+    width: 100%;
+}
+
+.image1 {
+    border-radius: 10px;
+    width: 100%;
+    height: 14rem;
+    margin: 0 auto;
+    display: flex;
+}
+
+.item:first-child {
+    padding-left: 2rem;
+}
+
+.item:last-child {
+    padding-right: 2rem;
+}
+
+.link {
+    display: block;
+    -webkit-user-drag: none;
+}
+
+a.link2 {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+}
+
+.newstext {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    margin-top: 20px;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    -webkit-user-drag: none;
+    margin-left: 2%;
+}
+
+.youtube {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.youtubeimg {
+    width: 50%
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+.part-52 {
+    flex: 1 1 auto;
+}
+
+.head2 {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.head2>h1 {
+    font-size: 1.5rem;
+}
+
+.part-52 .head2>ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.part-52 .head2>ul>li {
+    float: left;
+    width: 50%;
+    border-left-width: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.part-52 .head2>ul>li:first-child {
+    border-left-width: 1px;
+}
+
+
+/* 이렇게 하면 완벽합니다. */
+
+.part-52 .head2>ul>li.active2::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.part-52 .head2>ul>li>a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.part-52 .body2>div {
+    display: none;
+    border-top: 0;
+}
+
+.part-52 .body2>div.active2 {
+    display: inline;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+}
+
+.linesec2 {
+    margin: 0 auto;
+    margin-top: 0.11rem;
+    width: 12.925em;
+    height: 0.55em;
+    background-color: #b11864de;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    margin-top: 5rem;
+    padding: 30px 0;
+    background: #fff;
+    color: #A6A6A6;
+    font-size: 0.1rem;
+    display: flex;
+}
+
+.grid-container-footer {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 30%);
+    /* grid-column-gap: 0.2rem; */
+}
+
+.margin {
+    margin-left: 12rem;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -5000000000;
+}
+
+.first-img-text {
+    position: relative;
+}
+
+.mesiter-img {
+    background-image: url('../마이스터고/이미지/meister-img.png');
+    height: 48%;
+    width: 52%;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 5%;
+}

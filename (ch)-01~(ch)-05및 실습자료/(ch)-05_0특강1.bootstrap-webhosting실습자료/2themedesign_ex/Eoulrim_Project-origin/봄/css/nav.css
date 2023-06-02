@@ -1,0 +1,228 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* Variables CSS */
+/* Variables CSS */
+:root {
+  /* color */
+  --text_color: #fff;
+  --main_color_footer: #fff6b3;
+  --main_color_back: #fffce6;
+  --main_color_nav: #fff399;
+  --main_color_nav_dark: #ffed66;
+  --test_color_footer: #d4b3ff;
+  --test_color_back: #f1e6ff;
+  --test_color_nav: #c599ff;
+  --test_color_nav_dark: #a866ff;
+  --stats_color_footer: #ffb3b3;
+  --stats_color_back: #ffe6e6;
+  --stats_color_nav: #ff8080;
+  --stats_color_nav_dark:  #ff4d4d;
+  --spring_color_footer: #ffc2de;
+  --spring_color_back: #ffe6f1;
+  --spring_color_nav: #ff99c9;
+  --spring_color_nav_dark: #ff66ad;
+  --summer_color_footer: #cffdb5;
+  --summer_color_back: #effee6;
+  --summer_color_nav: #affb83;
+  --summer_color_nav_dark: #8ffa52;
+  --fall_color_footer: #fdd9b5;
+  --fall_color_back: #fef2e6;
+  --fall_color_nav: #fccc9c;
+  --fall_color_nav_dark: #fab36b;
+  --winter_color_footer: #bfebff;
+  --winter_color_back: #e6f7ff;
+  --winter_color_nav: #99dfff;
+  --winter_color_nav: #66cfff; 
+
+
+    /* font */
+    --body_font: 'Noto Sans KR', sans-serif;
+    --big_font_size: 1.5rem; /* 36px */
+    --normal_font_size: 1.1875rem;
+    --nav_font_size: 0.9375rem;
+    --small_font_size: 0.875rem;
+
+    /* font weight */
+    --font_bold: 700;
+
+    /* z-index */
+    --z-index: 100;
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    font-family: var(var(--body_font));
+    font-size: var(--normal_font_size);
+    color: var(--text_color);
+    background-color: var(--spring_color_back)
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--text_color);
+}
+img {
+    max-width: 100%; /* 이미지보다 창 크기가 작아져도 이미지를 완전히 유지하며 축소 */
+    height: auto; /* 기본값*/
+}
+
+/* nav */
+nav .container {
+    margin-left: 1rem; /* = 16px */
+    margin-right: 1rem;
+}
+
+/* header {
+    background-color: var(--main_color_bright);
+} */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: var(--spring_color_nav);
+}
+
+.nav_toggle {
+    display: none;
+}
+
+.nav_toggle i {
+    color: var(--main_color);
+    font-size: 1.875rem;
+}
+
+.logo{
+  padding: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  display: none;
+}
+
+nav .top_line{
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  margin-top: -35px;
+  color: #fff;
+  font-size: 20px;
+}
+
+nav .top_line::before{
+  content: "";
+  flex-grow: 1;
+  margin: 0px 16px;
+  background: #fff;
+  height: 1.34px;
+}
+
+nav .top_line::after{
+  content: "";
+  flex-grow: 1;
+  margin: 0px 16px;
+  background: #fff;
+  height: 1.34px;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -35px;
+}
+
+.nav_list {
+    display: flex;
+}
+
+.nav_link {
+  display: block;
+    font-size: var(--nav_font_size);
+    color: #fff;
+}
+
+.nav_item {
+    padding: 1vw 8vw;
+}
+
+.nav_item:hover{
+  background-color: var(--spring_color_nav_dark); 
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+
+nav .bottom_line{
+  position: absolute;
+  content: "";
+  width: 100%;
+  margin: 90px 16px;
+  background: #fff;
+  height: 1px;
+  border: 0;
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  nav {
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  }
+
+  .nav_toggle {
+    position: absolute;
+    display: block;
+    cursor: pointer; /* 마우스 커서 모양 변경 */
+    left: 10px;
+    top: 35px;
+  }
+
+  .logo{
+    display: block;
+    margin: 0 auto;
+  }
+
+  nav .top_line{
+    display: none;
+  }
+ 
+  .nav_list {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0; /* = width: 100%; */
+    top: 100px; /* nav 높이 */
+    background-color: var(--spring_color_nav);
+    height: 0; /* overflow: hidden과 함께 메뉴가 안 보이게 함 */
+    overflow: hidden;
+
+    transition: 0.3s;
+  }
+  .nav_item {
+    padding: 1rem 0;
+    border-top: 1px solid #fff;
+    text-align: center; /* 글자 가운데 정렬 */
+    z-index: var(--z-index);
+  }
+
+  nav .bottom_line{
+    display: none;
+  }
+
+  .show-menu {
+    height: 109px;
+  }
+}

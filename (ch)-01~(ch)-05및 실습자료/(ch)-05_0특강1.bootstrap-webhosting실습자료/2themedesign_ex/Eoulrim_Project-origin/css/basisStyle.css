@@ -1,0 +1,75 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* Variables CSS */
+:root {
+    /* color */
+    --text_color: #fff;
+    --main_color_footer: #ffec7d;
+    --main_color_back: #fff8ce;
+    --main_color_nav: #ffe552;
+    --main_color_nav_dark: #ffdb11;
+    --test_color_footer: #d4b3ff;
+    --test_color_back: #f1e6ff;
+    --test_color_nav: #c599ff;
+    --test_color_nav_dark: #a866ff;
+    --stats_color_footer: #ffb3b3;
+    --stats_color_back: #ffe6e6;
+    --stats_color_nav: #ff8080;
+    --stats_color_nav_dark:  #ff4d4d;
+    --spring_color_footer: #ffc2de;
+    --spring_color_back: #ffe6f1;
+    --spring_color_nav: #ff99c9;
+    --spring_color_nav_dark: #ff66ad;
+    --summer_color_footer: #cffdb5;
+    --summer_color_back: #effee6;
+    --summer_color_nav: #affb83;
+    --summer_color_nav_dark: #8ffa52;
+    --fall_color_footer: #fdd9b5;
+    --fall_color_back: #fef2e6;
+    --fall_color_nav: #fccc9c;
+    --fall_color_nav_dark: #fab36b;
+    --winter_color_footer: #bfebff;
+    --winter_color_back: #e6f7ff;
+    --winter_color_nav: #99dfff;
+    --winter_color_nav: #66cfff; 
+
+    /* font */
+    --body_font: 'Noto Sans KR', sans-serif;
+    --big_font_size: 1.5rem; /* 36px */
+    --normal_font_size: 1.1875rem;
+    --nav_font_size: 0.9375rem;
+    --small_font_size: 0.875rem;
+
+    /* font weight */
+    --font_bold: 700;
+
+    /* z-index */
+    --z-index: 100;
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: var(--body_font);
+    font-size: var(--normal_font_size);
+    color: var(--text_color)
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--text_color);
+}
+img {
+    max-width: 100%; /* 이미지보다 창 크기가 작아져도 이미지를 완전히 유지하며 축소 */
+    height: auto; /* 기본값*/
+}

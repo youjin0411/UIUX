@@ -1,0 +1,540 @@
+
+/* Variables CSS */
+:root {
+  /* color */
+  --text_color: #fff;
+  --main_color_footer: #fff6b3;
+  --main_color_back: #fffce6;
+  --main_color_nav: #fff399;
+  --main_color_nav_dark: #ffed66;
+  --test_color_footer: #d4b3ff;
+  --test_color_back: #f1e6ff;
+  --test_color_nav: #c599ff;
+  --test_color_nav_dark: #a866ff;
+  --stats_color_footer: #ffb3b3;
+  --stats_color_back: #ffe6e6;
+  --stats_color_nav: #ff8080;
+  --stats_color_nav_dark:  #ff4d4d;
+  --spring_color_footer: #ffc2de;
+  --spring_color_back: #ffe6f1;
+  --spring_color_nav: #ff99c9;
+  --spring_color_nav_dark: #ff66ad;
+  --summer_color_footer: #cffdb5;
+  --summer_color_back: #effee6;
+  --summer_color_nav: #affb83;
+  --summer_color_nav_dark: #8ffa52;
+  --fall_color_footer: #fdd9b5;
+  --fall_color_back: #fef2e6;
+  --fall_color_nav: #fccc9c;
+  --fall_color_nav_dark: #fab36b;
+  --winter_color_footer: #bfebff;
+  --winter_color_back: #e6f7ff;
+  --winter_color_nav: #99dfff;
+  --winter_color_nav: #66cfff; 
+} 
+* {
+  margin: 0; /*빈공간X*/
+  padding: 0; /*빈공간X*/
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+}
+
+body {
+  background-color: rgb(255, 165, 205);
+}
+/* body{
+  height: 100%;
+} */
+p{
+  color: #000000;
+  font-size: 1.5vw;
+  /*즉, vw는 현재 실행중인 스크린 크기에 맞춰 vw(width)상대적 크기를 반환하겠다는 뜻입니다.*/
+}
+
+/*슬라이드 제목*/
+b {
+  font-size: 2.8vw;
+}
+
+/*이미지(꽃, 메이크업)*/
+.img { 
+  max-width: 100%;
+  width: 40%;
+  height: 50%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+} 
+
+/* 팔레트 이미지 */
+.img_p {  
+  max-width: 100%;
+  width: 20%;
+  height: 50%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* 코디 + 화장품 이미지 */
+.styleimg { 
+  max-width: 100%;
+  width: 20%;
+  height: 45%; 
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* 라인 선  */
+
+/* 슬라이더 1 반응형 위에 라인 */
+.carousel-item .top_line{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: -24px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+/* 슬라이더 1 반응형 아래 라인 */
+.carousel-item .top_line_down{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+
+/* 슬라이더 2 반응형 위에 라인 */
+.carousel1-item .top_line{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top:-30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+/* 슬라이더 2 반응형 아래에 라인 */
+.carousel1-item .top_line_down{
+  width: 96%;
+  height: 1.5px;
+  position: relative;
+  top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: black;
+}
+
+/* body carousel 반응형 슬라이더1 페이지 */
+.sumlight_page {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  color: #713D84;
+  box-sizing: border-box;
+  padding: 60px 0px;
+  height: auto;
+  padding-top: 10%;
+  background-color: white;
+}
+
+/* body carousel 반응형 슬라이더2 페이지 */
+.sumlight_page2 {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  color: #713D84;
+  box-sizing: border-box;
+  padding: 60px 0px;
+  height: auto;
+  padding-top: 10%;
+}
+
+/* Variables CSS */
+/* mid2 */
+.mid2 {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 260px;
+  margin-bottom: 70px;
+}
+.mid2 .title{
+  margin-top: 30px;
+  font-size: 23px;
+  color: rgb(30, 30, 110);
+}
+.mid2 .content{
+  text-align: center;
+  margin-top: 48px;
+  font-size: 0.8rem;
+  color: #000000;
+}
+
+/* FOOTER  CSS */
+.footer {
+  width: 100%; /* 넓이를 100%로 채우기 반응형 */
+  background-color:var(--spring_color_footer);
+  padding: 10px 90px;
+}
+
+.contain {
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
+  display: flex;
+  justify-content: space-between;  
+}
+
+.footer .col {
+  align-items: center;
+  float: left;
+  column-gap: 40px; /*글자사이의 거리 */
+}
+
+.footer .col .social {
+  float: left;
+}
+
+.footer .col h1 {
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: #292e52;
+  /* footer 소제목 글씨 모양 */
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.footer .col ul {
+  list-style-type: none; /* • 모양 없애기 */
+}
+
+.footer .col ul li {
+  color: #ffffff;
+  font-size: 0.97vw;
+  /*글자사이의 간격*/
+  padding: 6px 0px 6px 0px; 
+  cursor: pointer; /*cursor 마우스 커서 모양 뜨기 */
+  /*마우스 커서 시 색상 변하는 속도 조절 */
+  transition: 0.2s; 
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+}
+
+.social ul li {
+  display: inline-block;
+}
+ 
+i {
+  font-size: 1.1rem;
+}
+/*마우스커서 올릴 시 글자의 색상이 변함 */
+.footer .col ul li:hover {
+  color: purple;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+}
+
+/*마우스커서 올릴 시 글자의 색상이 변함 */
+.social ul li img :hover {
+  color: #fff;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* @media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 100%;
+    display: block;
+    padding: 0.5rem 0;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .footer .col {
+    width: 100%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+} */
+/* @media screen and (max-width: 600px) {
+  .footer .col {
+    width: 10%;
+  }
+  .footer .col h1 {
+    font-size: 0.375rem;
+  }
+  .footer .col ul li {
+    font-size: 0.3vw;
+  }
+  .col {
+    display:flow-root;
+  }
+} */
+/* @media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+} */
+
+
+/* nav css */
+
+/* carousel */
+.carousel {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+}
+.carousel, .carousel1 {
+  overflow: hidden; 
+}
+
+/* 1번 슬라이드 박스  */
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+/* 화면 슬라이드 css */
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+}
+
+/* 1번 슬라이드 아래 크기  */
+.carousel-control {
+  border-radius: 50%;
+  color:pink;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+/* 왼쪽 슬라이드 버튼 위치 */
+.carousel-control.prev {
+  left: 2%;
+}
+
+/* 오른쪽 슬라이드 버튼 위치  */
+.carousel-control.next {
+  right: 2%;
+}
+
+/* 슬라이드 버튼 클릭시 검은색으로 변함 */
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+/* 슬라이드 버튼 눌렸을 시 화면 넘어가게 하기  */
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+/* 아래 점 세개 현재 페이지 표시 점 중앙 정렬 */
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+/* 현재 페이지 점 위치 선 아래로  */
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* 현재 페이지 점 위치 정렬 */
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+/* 현재 페이지 점 말고 다른 페이지 점 클릭시 색상 변함 */
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+/* 현재 점 페이지 표시  */
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
+
+/* css */
+
+/* 슬라이드2번 박스 크기  */
+.carousel1 {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+}
+
+/* 슬라이드2 박스 */
+.carousel1-open:checked + .carousel1-item {
+  position: static;
+  opacity: 100;
+}
+
+/* 슬라이드2 슬라이드 넘김  */
+.carousel1-item {
+  position: absolute;
+  opacity: 0;
+}
+
+/* 슬라이드2 화면 넘김 버튼  */
+.carousel1-control {
+  border-radius: 50%;
+  color:pink;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+/* 화면 넘김 왼쪽 버튼 */
+.carousel1-control.prev {
+  left: 2%;
+}
+
+/* 화면 넘김 오른쪽 버튼 */
+.carousel1-control.next {
+  right: 2%;
+}
+
+/* 슬라이드2 버튼 클릭 시 검은색으로 색상 변환 */
+.carousel1-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+/* 슬라이드2 화면 넘김 버튼 생성 */
+#carousel1-1:checked ~ .control1-1,
+#carousel1-2:checked ~ .control1-2,
+#carousel1-3:checked ~ .control1-3 {
+  display: block;
+}
+
+/* 슬라이드2 현재 페이지 확인 점 중앙 정렬 */
+.carousel1-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+/* 슬라이드2 현재 페이지 확인 점 선 아래로 내리기 */
+.carousel1-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* 슬라이드2 현재 페이지 확인 점 정렬 */
+.carousel1-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+/* 슬라이드2 현재 확인 점 말고 나머지 점 클릭시 색상 변화 */
+.carousel1-bullet:hover {
+  color: #aaaaaa;
+}
+
+/* 슬라이드2 현재 페이지 확인 점 화면에 따라 변화됨 */
+#carousel1-1:checked ~ .control1-1 ~ .carousel1-indicators li:nth-child(1) .carousel1-bullet,
+#carousel1-2:checked ~ .control1-2 ~ .carousel1-indicators li:nth-child(2) .carousel1-bullet,
+#carousel1-3:checked ~ .control1-3 ~ .carousel1-indicators li:nth-child(3) .carousel1-bullet {
+  color: #428bca;
+}
+
+
+/*버튼 */
+.start{
+  width: 45%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.start_button{
+  height: 65px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  width: 409px;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #ffc2de;
+}
+.start_button:active{
+  box-shadow: 3px 3px 0 rgb(0,0,0,0.5);
+  position: relative;
+  top: 2px;
+}
